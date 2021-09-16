@@ -28,6 +28,11 @@ public class Program {
         out.println("===TEST 3: seller findAll ===");
         list = sellerDao.findAll();
         for (Seller obj : list) out.println(obj);
+
+        out.println("===TEST 4 : seller insert ===");
+        Seller newSeller = new Seller(null, "Greg", "email@mail.com", new Date(), 4000.0, department);
+        sellerDao.insert(newSeller);
+        out.println("Insert! " + newSeller.getId());
     }
 
 
